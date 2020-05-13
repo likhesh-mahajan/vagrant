@@ -9,5 +9,9 @@ https://blog.ycshao.com/2017/09/16/how-to-upload-vagrant-box-to-vagrant-cloud/
 
 ## Important instructions to install VirtualBox Guest Additions
 
+mount -r /dev/cdrom /media/VirtualBoxGuestAdditions
+cd /media/VirtualBoxGuestAdditions
+./VBoxLinuxAdditions.run
+
 https://www.if-not-true-then-false.com/2010/install-virtualbox-guest-additions-on-fedora-centos-red-hat-rhel/
 

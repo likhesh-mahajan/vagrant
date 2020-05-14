@@ -1,5 +1,8 @@
 #!/bin/bash
 
-mkdir /media/VirtualBoxGuestAdditions
-yum install gcc kernel-ml-devel kernel-ml-headers dkms make bzip2 perl
-export KERN_DIR=/usr/src/kernels/`uname -r`
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+yum install yum install https://www.elrepo.org/elrepo-release-7.el7.elrepo.noarch.rpm
+yum -y install yum-utils
+yum-config-manager --enable elrepo-kernel
+yum -y install kernel-ml
+grub2-mkconfig -o /boot/grub2/grub.cfg
